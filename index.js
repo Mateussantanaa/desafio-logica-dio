@@ -1,45 +1,24 @@
-let heroiName = "Mateus Santana"
-let xPoints = 10000
-let nivel = " "
+const heroiName = "Mateus Santana";
+let xPoints = 1000;
 const notificacao = "O heroi " + heroiName + " tem " + xPoints + " pontos e esta no nivel "
 
-if (xPoints < 1000) {
-    nivel ="Ferro"
+const niveis = [
+  { max: 1000,   label: "Ferro"      },
+  { max: 2000,   label: "Bronze"     },
+  { max: 5000,   label: "Prata"      },
+  { max: 7000,   label: "Ouro"       },
+  { max: 8000,   label: "Platina"    },
+  { max: 9000,   label: "Ascendente" },
+  { max: 10000,  label: "Imortal"    }
+];
+
+let nivel = "Radiante";
+
+for (let i = 0; i < niveis.length; i++) {
+  if (xPoints <= niveis[i].max) {
+    nivel = niveis[i].label;
+    break;
+  }
 }
 
-else if (xPoints >= 1000 && xPoints <= 2000) {
-   nivel = nivel = "Bronze"
-}
-else if (xPoints >= 2001 && xPoints <= 5000) {
-   nivel = "Prata"
-}
-
-else if (xPoints >= 5001 && xPoints <= 7000) {
-   nivel = "Ouro"
-}
-
-else if (xPoints >= 7001 && xPoints <= 8000) {
-   nivel = "Platina"
-}
-
-else if (xPoints >= 7001 && xPoints <= 8000) {
-   nivel = "Platina"
-}
-
-else if (xPoints >= 8001 && xPoints <= 9000) {
-   nivel = "Acesdente"
-}
-
-else if (xPoints >= 8001 && xPoints <= 9000) {
-   nivel = "Ascendente"
-}
-
-else if (xPoints >= 9001 && xPoints <= 10000) {
-   nivel = "Imortal"
-}
-
-else if (xPoints >= 10001) {
-   nivel = "Radiante"
-}
-
-console.log(notificacao + nivel)
+console.log(notificacao + nivel);
