@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.info {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.info span {
+  font-weight: bold;
+}
+
+.font-nunito {
+  font-family: 'Nunito', sans-serif;
+}
+
+.fw-bold {
+  font-weight: bold;
+  color: tomato;
+}
