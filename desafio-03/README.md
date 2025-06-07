@@ -1,34 +1,41 @@
-# Desafio de Lógica da Dio
+# Atacando com Heroi
 
-# Classificador de Nível do Herói 🛡️
+Este projeto é uma página HTML simples que permite ao usuário criar um herói, escolher seu tipo e ver a mensagem de ataque.
 
-Este é um pequeno projeto em JavaScript que classifica o nível de um herói com base em sua pontuação (XP). A pontuação é comparada com faixas predefinidas, e o programa informa em qual nível o herói se encontra.
+## Como usar
 
-## 💡 Como funciona
+1. **Abrir o arquivo**  
+   Abra o arquivo `index.html` no seu navegador (duplo‐clique ou arraste para uma janela do navegador).
 
-O programa define:
-- Um nome de herói
-- A quantidade de pontos (XP)
-- Uma lista de níveis, cada um com uma faixa de pontuação
+2. **Preencher o formulário**  
+   - No campo **Nome do Herói**, digite o nome que quiser.  
+   - Em **Tipo de Herói**, escolha uma das opções:
+     - Mago
+     - Guerreiro
+     - Ninja
+     - Monge
 
-Usando um loop `for`, ele percorre essa lista e identifica o nível correto baseado na pontuação do herói.
+3. **Submeter**  
+   Clique no botão **Atacar!** para ver, logo abaixo, uma mensagem descrevendo o ataque do seu herói.
 
-## 📊 Faixas de Níveis
+## Estrutura do código
 
-| Pontos (XP)         | Nível        |
-|---------------------|--------------|
-| 0 - 999             | Ferro        |
-| 1000 - 2000         | Bronze       |
-| 2001 - 5000         | Prata        |
-| 5001 - 7000         | Ouro         |
-| 7001 - 8000         | Platina      |
-| 8001 - 9000         | Ascendente   |
-| 9001 - 10000        | Imortal      |
-| Acima de 10000      | Radiante     |
+- **Classe `Heroi`**  
+  Definida em JavaScript, recebe `nome`, `idade` (neste exemplo, fixa em 20) e `tipo`.  
+  O método `atacar()` retorna uma string com o tipo, nome e tipo de ataque.
 
-## 🧪 Exemplo de uso
+- **Formulário HTML**  
+  - `<input>` para o nome.  
+  - `<select>` para o tipo.  
+  - `<button>` para submeter.
 
-```javascript
-const heroiName = "Mateus Santana";
-let xPoints = 10000;
-// Resultado esperado: Imortal
+- **Manipulação de evento**  
+  Um `eventListener` em `submit` do formulário previne o recarregamento da página, instancia um `Heroi` e exibe o resultado dentro da `<div id="resultado">`.
+
+## Personalizações
+
+- Você pode ajustar a `idade` passando um campo extra no formulário.
+- Adicionar estilos CSS diferentes ou animações.
+- Ampliar a classe `Heroi` com mais métodos (por exemplo, `defender()`, `usarHabilidade()` etc.).
+
+Divirta‐se testando diferentes heróis e ataques! 🚀
