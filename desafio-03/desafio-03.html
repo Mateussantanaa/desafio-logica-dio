@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Herói Atacante</title>
+  <link rel="stylesheet" href="desafio-03.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Crie seu Herói</h1>
+    <form id="heroiForm" class="card">
+      <div class="field">
+        <label for="nome">Nome do Herói</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite o nome..." required />
+      </div>
+      <div class="field">
+        <label for="idade">Idade do Herói</label>
+        <input type="number" id="idade" name="idade" placeholder="Digite a idade..." min="1" required />
+      </div>
+      <div class="field">
+        <label for="tipo">Tipo de Herói</label>
+        <select id="tipo" name="tipo" required>
+          <option value="">-- selecione --</option>
+          <option value="mago">Mago 🪄</option>
+          <option value="guerreiro">Guerreiro ⚔️</option>
+          <option value="ninja">Ninja 🥷</option>
+          <option value="monge">Monge 🧘</option>
+        </select>
+      </div>
+      <button type="submit" class="btn">Atacar!</button>
+    </form>
+    <div id="resultado" class="resultado"></div>
+  </div>
+
+  <script src="desafio-03.js"></script>
+</body>
+</html>
